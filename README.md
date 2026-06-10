@@ -6,7 +6,7 @@ Welcome to my core engineering workspace for building autonomous, production-gra
 
 ## 🚀 Core Progress Dashboard
 
-### 📁 1. Structural Anatomy & Data Bridges (`json_lab.py`, `data_bridge.py`)
+### 📁 1. Structural Anatomy & Data Bridges (`json_lab.py`)
 * Deeply understood structural JSON parsing (Objects, Arrays, and Nested Key-Value tracking blocks) which serve as the foundation for Agent Memory and App States.
 * Mastered the complete serialization lifecycle:
   * `json.loads()` & `json.dumps()`: Handled network-level transformation strings to seamlessly decode LLM generation models into Python objects.
@@ -20,7 +20,7 @@ Welcome to my core engineering workspace for building autonomous, production-gra
 * Engineered fail-safe parsers to capture `json.JSONDecodeError` events gracefully without halting system application loops.
 * Set up diagnostic tracking utilizing `as error_metrics` variables to expose column break positions—establishing a solid design baseline for agent self-healing loops.
 
-### 🌐 4. Live API & Endpoint Infrastructure (`api_advanced.py`, `api_resilient.py`)
+### 🌐 4. Live API & Endpoint Infrastructure (`api_handler.py`, `api_resilient.py`)
 * Configured robust HTTP request streams (`GET`/`POST`) using the `requests` engine to communicate directly with remote databases.
 * Implemented production-standard parameter filtering dictionaries and custom metadata request headers to safeguard authentication scopes.
 * Secured connection instances with strict execution boundaries (`timeout=5`) and structured explicit hierarchical exception catches:
