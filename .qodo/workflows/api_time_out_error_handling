@@ -1,0 +1,16 @@
+import requests
+BROKEN_URL = "https://httpstat.us/404"
+try:
+    print("Requesting data with a 5 second timeout safeguard")
+    response=requests.get(BROKEN_URL,timeout=5)
+    response.raise_for_status
+    print("Data fetched succesfully")
+    
+except requests.exceptions.Timeout:
+    print(" [TIMEOUT ERROR] The remote server took too long to respond!")
+
+except requests.exceptions.HTTPError as http_mistake:
+    print(f"[HTTP STATUS ERROR] Connected successfully, but server returned a failure code.\n Error is : {http_mistake}")
+
+except requests.exceptions.RequestException as network_error:
+    print(f"[NETWORK CRITICAL] Internet connection failure or invalid domain target!\n Error: {network_error}")
